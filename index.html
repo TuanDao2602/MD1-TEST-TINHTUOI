@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<!--Bài 1: Một gia đình có 3 bố con trong đó tuổi em kém tuổi anh 3 tuổi. Tuổi của bố gấp 6 lần tuổi anh. -->
+<!--Viết chương trình nhập vào tuổi của em in ra tuổi của anh và tuổi của bố. (10đ)-->
+<input id="tuoiem" type="number" placeholder="nhập vào tuổi của em" >
+<button id="tinhtoan" onclick="tinhtuoi()">Tính Toán</button>
+<h2 id="hienthi"></h2>
+<script>
+    let tuoiAnh;
+    let tuoiBo;
+    function tinhtuoi(){
+        let tuoiEm=+document.getElementById("tuoiem").value;
+        if (tuoiEm>0){
+      tuoiAnh=tuoiEm+3;
+      tuoiBo=tuoiAnh*6;
+       document.getElementById("hienthi").innerHTML=` tuổi của anh là : ${tuoiAnh} , tuổi của bố là: ${tuoiBo}`
+    }else {
+            document.getElementById("hienthi").innerHTML= "Tuổi phải lớn hơn 0"
+        }
+    }
+</script>
+
+
+<script src="app.js"></script>
+</body>
+</html>
